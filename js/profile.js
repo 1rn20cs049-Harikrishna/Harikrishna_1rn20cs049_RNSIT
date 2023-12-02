@@ -20,7 +20,7 @@ function profileView(storedMail) {
     data: formdata,
     error: function (request, text, error) {
       console.log(arguments);
-      error = JSON.parse(request.responseText);
+      // error = JSON.parse(request.responseText);
       alert(error.responseText);
       console.log(error);
       return;

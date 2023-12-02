@@ -56,3 +56,35 @@ p span {
     background: #fff;
     padding: 0 10px;
 }
+
+
+.profile-card {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    margin-top: 30px;
+    font-family:"Roboto";
+    font-size:16px;
+}
+
+.profile-card h2 {
+    color: #007bff;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    font-weight: bold;
+}
+
+#logout {
+    background-color: #dc3545;
+    color: #fff;
+}
+
+#logout:hover {
+    background-color: #c82333;
+}
