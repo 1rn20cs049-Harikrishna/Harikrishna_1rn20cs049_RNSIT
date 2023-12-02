@@ -98,8 +98,30 @@ try{
     
         
         } else {
-            http_response_code(404);
-            echo "No document found with the provided email.";
+
+
+            $data = [
+                'name' => '',
+                'email' => $email,
+                'age' => 0,
+                'dob' => '',
+                'contact' => 0,
+                'gender' => "Male",
+            ];
+
+            //when user created for the time then ,,new entry will be made to mongodb
+              $result = $collection->insertOne($data);
+          
+
+            if ($result->getInsertedCount() > 0) {
+                http_response_code(201);
+                // echo "No document found with the provided email.";
+                echo json_encode(array("message" => "new user is added to db"));
+            } else {
+                http_response_code(404);
+                echo "No document found with the provided email.";
+                return;
+            }
             return;
         }
     }else {
